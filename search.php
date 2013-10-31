@@ -45,7 +45,7 @@
         $name = $_POST['name'];
         
 	// Retrieve data
-    $sql_select = "SELECT * FROM registration_tbl WHERE $name LIKE '%".$name."%' ";
+    $sql_select = "SELECT * FROM registration_tbl WHERE name LIKE '%".$name."%' ";
     $stmt = $conn->query($sql_select);
     $registrants = $stmt->fetchAll(); 
     if(count($registrants) > 0) {
